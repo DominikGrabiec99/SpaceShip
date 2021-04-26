@@ -10,18 +10,18 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container" data-container>
         <div class="spaceship" data-spaceship></div>
         <section class="information">
-            <article class="information__content">Score: 0</article>
-            <article class="information__content">Lives: 3</article>
+            <article class="information__content">Score: <span data-score></span></article>
+            <article class="information__content">Lives: <span data-lives></span></article>
         </section>
-        <div class="modal hide">
+        <div class="modal hide" data-modal>
             <div class="modal__content">
-                <p class="modal__text">
+                <p class="modal__text" data-score-info>
                     You lose! Start new game!
                 </p>
-                <button class="modal__button"></button>
+                <button class="modal__button" data-button></button>
             </div>
         </div>
     </div>

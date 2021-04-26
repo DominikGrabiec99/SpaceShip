@@ -11,6 +11,7 @@
     --size-unit--big: 128px;
     --ships-animation-time: 200ms;
     --explosion-animation-time: 600ms;
+    --secondary-color: #510303;
 }
 
 body{
@@ -95,6 +96,8 @@ body{
     width: var(--size-unit);
     height: var(--size-unit);
     animation: moveEnemy var(--ships-animation-time) steps(5) infinite;
+    position: fixed;
+    z-index: 1;
 }
 
 .enemy--big {
@@ -102,6 +105,7 @@ body{
     width: var(--size-unit--big);
     height: var(--size-unit--big);
     animation: moveEnemyBig var(--ships-animation-time) steps(8) infinite;
+    position: fixed;
 }
 
 .explosion {
@@ -109,6 +113,7 @@ body{
     width: var(--size-unit);
     height: var(--size-unit);
     animation: moveExplosionSmall var(--explosion-animation-time) steps(17) forwards;
+    position: fixed;
 }
 
 .explosion--big {
@@ -116,18 +121,23 @@ body{
     width: var(--size-unit--big);
     height: var(--size-unit--big);
     animation: moveExplosionBig var(--explosion-animation-time) steps(17) forwards;
+    position: fixed;
 }
 
 .missile{
     background-image: url('../images/missile.png');
     background-size: cover;
-    background-repeat: no-repeat;
     width: 12px;
     height: 24px;
+    position: absolute;
 }
 
 .hide {
     display: none;
+}
+
+.hit{
+    background-color: var(--secondary-color);
 }
 
 @keyframes moveShip {
